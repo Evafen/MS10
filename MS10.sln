@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS10", "MS10\MS10.csproj", "{194F7D80-20AF-4463-A314-ED2B25FE0CAD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "My Mini Shoppix", "MS10\My Mini Shoppix.csproj", "{194F7D80-20AF-4463-A314-ED2B25FE0CAD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
