@@ -7,16 +7,12 @@ namespace MS10
 {
     public partial class LoginPage : Form
     {
-        private object TextBox1;
-
-        public object TextBox2 { get; private set; }
-
         public LoginPage()
         {
             InitializeComponent();
         }
 
-        private void UserEnter(object sender, EventArgs e)
+        private void TxtUserEnter(object sender, EventArgs e)
         {
             if (txtUsername.Text.Equals("Username"))
             {
@@ -25,7 +21,7 @@ namespace MS10
 
         }
 
-        private void UserLeave(object sender, EventArgs e)
+        private void TxtUserLeave(object sender, EventArgs e)
         {
             if (txtUsername.Text.Equals(""))
             {
@@ -64,36 +60,3 @@ namespace MS10
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

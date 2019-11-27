@@ -94,8 +94,8 @@ namespace MS10
             this.txtUsername.TabIndex = 0;
             this.txtUsername.Text = "Username";
             this.txtUsername.WordWrap = false;
-            this.txtUsername.Enter += new System.EventHandler(this.UserEnter);
-            this.txtUsername.Leave += new System.EventHandler(this.UserLeave);
+            this.txtUsername.Enter += new System.EventHandler(this.TxtUserEnter);
+            this.txtUsername.Leave += new System.EventHandler(this.TxtUserLeave);
             // 
             // pictureBox1
             // 
