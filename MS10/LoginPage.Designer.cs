@@ -50,11 +50,9 @@ namespace MS10
             this.panel1.Controls.Add(this.txtUsername);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(344, 97);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1107, 490);
             this.panel1.TabIndex = 0;
-            this.panel1.CursorChanged += new System.EventHandler(this.TxtUsername_TextChanged);
             // 
             // btnLogin
             // 
@@ -63,7 +61,6 @@ namespace MS10
             this.btnLogin.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnLogin.Location = new System.Drawing.Point(400, 399);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(240, 58);
             this.btnLogin.TabIndex = 3;
@@ -76,14 +73,13 @@ namespace MS10
             this.txtPassword.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(251, 314);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(537, 23);
+            this.txtPassword.Size = new System.Drawing.Size(537, 20);
             this.txtPassword.TabIndex = 0;
             this.txtPassword.Text = "Password";
             this.txtPassword.UseSystemPasswordChar = true;
-            this.txtPassword.Enter += new System.EventHandler(this.TxtUserEnter);
-            this.txtPassword.Leave += new System.EventHandler(this.txtUserLeave);
+            this.txtPassword.Enter += new System.EventHandler(this.PassEnter);
+            this.txtPassword.Leave += new System.EventHandler(this.PassLeave);
             // 
             // txtUsername
             // 
@@ -92,21 +88,19 @@ namespace MS10
             this.txtUsername.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtUsername.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.Location = new System.Drawing.Point(251, 240);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUsername.Multiline = true;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(537, 26);
             this.txtUsername.TabIndex = 0;
             this.txtUsername.Text = "Username";
-            this.txtUsername.TextChanged += new System.EventHandler(this.TxtUsername_TextChanged_1);
-            this.txtUsername.Enter += new System.EventHandler(this.TxtUserEnter);
-            this.txtUsername.Leave += new System.EventHandler(this.txtUserLeave);
+            this.txtUsername.WordWrap = false;
+            this.txtUsername.Enter += new System.EventHandler(this.UserEnter);
+            this.txtUsername.Leave += new System.EventHandler(this.UserLeave);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(361, 46);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(300, 134);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -117,7 +111,6 @@ namespace MS10
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel2.Location = new System.Drawing.Point(213, 47);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1391, 202);
             this.panel2.TabIndex = 0;
@@ -125,17 +118,16 @@ namespace MS10
             // LoginPage
             // 
             this.AcceptButton = this.btnLogin;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1740, 668);
+            this.ClientSize = new System.Drawing.Size(1540, 668);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "LoginPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Login";
             this.TopMost = true;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -154,10 +146,6 @@ namespace MS10
             LoginPage loginPage = this;
             loginPage.Load += new System.EventHandler(this.LoginPage_Load);
             this.panel1.ResumeLayout(false);
-        }
-
-        private void TxtUsername_TextChanged(object sender, EventArgs e)
-        {
         }
 
         #endregion
